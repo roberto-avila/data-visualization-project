@@ -6,7 +6,7 @@ from plotly import offline
 #Make API call and store the response.
 url = 'https://api.github.com/search/repositories?q=language:python&sort=stars'
 v3_headers = {'Accept': 'application/vnd.github.v3+json'}
-response = requests.get(url, headers=v3_headers)  
+response = requests.get(url, headers=v3_headers, verify=False)  
 print(f"Status code: {response.status_code}")
 
 #Process results.
